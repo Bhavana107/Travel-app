@@ -1,0 +1,344 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.Nav_wrapper {
+  width: 90%;
+  max-width: 1100px;
+  height: 50px;
+
+  margin: 25px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+  box-sizing: border-box;
+
+  background: white;
+
+  border: 1px solid #aaa;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+  position: relative;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo a {
+  text-decoration: none;
+  color: #222;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   DESKTOP MENU
+========================= */
+
+.desktop_menu {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.desktop_menu li a {
+  text-decoration: none;
+
+  color: #333;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.desktop_menu li a:hover {
+  color: #e77d7d;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.nav_btns {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search_wrapper {
+  display: flex;
+  align-items: center;
+
+  background: #f5f5f5;
+
+  border-radius: 6px;
+
+  padding: 5px 8px;
+
+  width: 120px;
+  height: 25px;
+
+  box-sizing: border-box;
+}
+
+.search_wrapper i {
+  font-size: 13px;
+  color: #777;
+}
+
+.search_wrapper input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 9px;
+
+  padding-left: 5px;
+}
+
+.search_wrapper input::placeholder {
+  color: #888;
+}
+
+
+/* =========================
+   CALL
+========================= */
+
+.Call_btn {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+}
+
+.Call_btn i {
+  font-size: 15px;
+  color: #e77d7d;
+}
+
+.Call_btn p {
+  margin: 0;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  color: #333;
+}
+
+.Call_btn small {
+  display: block;
+
+  font-size: 7px;
+  font-weight: 400;
+
+  color: #777;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.nav_btns > i {
+  display: none;
+
+  font-size: 20px;
+  color: #333;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile_menu {
+  display: none;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .Nav_wrapper {
+    width: 92%;
+    padding: 0 20px;
+  }
+
+  .desktop_menu {
+    gap: 15px;
+  }
+
+  .desktop_menu li a {
+    font-size: 10px;
+  }
+
+  .search_wrapper {
+    width: 100px;
+  }
+
+  .nav_btns {
+    gap: 10px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .Nav_wrapper {
+    width: 92%;
+    height: 55px;
+
+    margin-top: 15px;
+
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    /* Important */
+    position: relative;
+  }
+
+
+  /* Hide desktop menu */
+  .desktop_menu {
+    display: none;
+  }
+
+
+  /* Hide search */
+  .search_wrapper {
+    display: none;
+  }
+
+
+  /* Hide call */
+  .Call_btn {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+  .nav_btns > i {
+    display: block;
+  }
+
+
+  /* =========================
+     OPEN MOBILE MENU
+  ========================= */
+
+  .mobile_menu {
+    position: absolute;
+
+    top: 64px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 15px 25px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    list-style: none;
+
+    background: white;
+
+    border: 1px solid #aaa;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+  }
+
+
+  .mobile_menu li a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 12px;
+
+    display: block;
+  }
+
+
+  .mobile_menu li a:hover {
+    color: #e77d7d;
+  }
+
+
+  .logo a {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .Nav_wrapper {
+    width: 94%;
+    height: 52px;
+
+    padding: 0 15px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+
+  .mobile_menu {
+    top: 61px;
+  }
+}
